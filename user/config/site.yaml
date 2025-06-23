@@ -1,0 +1,19 @@
+title: Underdogs
+default_lang: en
+author:
+  name: 'Joe Bloggs'
+  email: joe@test.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Underdogs is an Estonian booking & artist management agency operating from Tallinn'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects: null
+routes: null
+blog:
+  route: /blog

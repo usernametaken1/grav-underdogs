@@ -1,0 +1,104 @@
+.artist {
+    padding-top: $layout-spacing;
+    .header {
+        margin-bottom: 1rem;
+
+        @media (max-width: $size-lg) {
+            padding-top: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2rem;
+            @media (max-width: $size-sm) {
+                font-size: .9rem;
+                line-height: 1.3rem;
+            }
+        }
+    }
+
+    .artist-nav {
+        border-right: 1px solid white;
+        .nav {
+            position: sticky;
+            top: $layout-spacing;
+        }
+
+
+    }
+
+    .artist-name {
+        @media (max-width: $size-sm) {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 5rem;
+        font-weight: 500;
+        line-height: 1;
+        color: rgba(255, 255, 255, 0.2);
+        margin-bottom: $layout-spacing*1.5;
+
+        @media (max-width: $size-lg) {
+            font-size: 3.8rem;
+        }
+    }
+
+    .next-up {
+        svg {
+            fill: white;
+            height: 25px;
+            margin-left: 5px;
+        }
+    }
+
+    .profile {
+        padding-left: $layout-spacing*2;
+        @media (max-width: $size-sm) {
+            padding-left: $layout-spacing;
+        }
+    }
+
+    .social {
+        margin-top: $layout-spacing;
+
+        h5 {
+            margin-bottom: 0;
+        }
+
+        .platforms {
+            width: 250px;
+            margin-top: $layout-spacing;
+
+            .item {
+                display: inline-block;
+                background: white;
+                width: 70px;
+                margin-top: 10px;
+
+                svg {
+                    margin-top: 6px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+
+    .profile-image {
+        width: 300px;
+
+        @media (max-width: $size-lg) {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    iframe {
+        margin-top: $layout-spacing*1.5;
+        margin-bottom: $layout-spacing;
+    }
+}

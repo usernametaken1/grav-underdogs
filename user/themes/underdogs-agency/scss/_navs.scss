@@ -1,0 +1,40 @@
+// Navs
+.nav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: $unit-1 0;
+
+    .nav-item {
+        a {
+            color: $gray-color-light;
+            text-decoration: none;
+
+            &:focus,
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        &.active {
+            & > a {
+                color: darken($gray-color-light, 30%);
+                font-weight: bold;
+
+                &:focus,
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+
+            & a::after {
+                content: ' <-';
+            }
+        }
+    }
+
+    & .nav {
+        margin-bottom: $unit-2;
+        margin-left: $unit-4;
+    }
+}

@@ -1,0 +1,38 @@
+.artist {
+    .columns {
+        margin-top: $control-size;
+
+        h1 {
+            color: rgba($gray-color-light, 0.2);
+            a {
+                position: relative;
+            }
+        }
+
+        .roster {
+            .nav-holder {
+                border-right: $border-width solid $gray-color-light;
+                height: 100%;
+
+                .nav {
+                    padding-right: $control-size;
+                }
+            }
+
+        }
+
+        .profile {
+            width: 350px;
+
+            @media (max-width: $size-sm) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: $layout-spacing*2;
+}

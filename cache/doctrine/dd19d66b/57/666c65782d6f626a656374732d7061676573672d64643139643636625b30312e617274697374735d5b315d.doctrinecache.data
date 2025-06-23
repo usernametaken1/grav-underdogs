@@ -1,0 +1,12 @@
+1750674502
+O:39:"Grav\Common\Flex\Types\Pages\PageObject":4:{s:4:"type";s:5:"pages";s:3:"key";s:7:"artists";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:3:{s:5:"title";s:7:"Artists";s:11:"media_order";s:11:"artists.jpg";s:7:"content";a:2:{s:5:"items";s:14:"@self.children";s:5:"order";a:2:{s:2:"by";s:4:"date";s:3:"dir";s:4:"desc";}}}s:11:"frontmatter";s:122:"title: Artists
+media_order: artists.jpg
+content:
+    items: '@self.children'
+    order:
+        by: date
+        dir: desc";s:8:"markdown";s:173:"## //UNDERDOGS AGENCY
+
+Underdogs is an Estonian booking & artist management agency operating from Tallinn
+
+CONTACT: [kennel@underdogs.agency](mailto:kennel@underdogs.agency)";}s:7:"storage";a:7:{s:3:"key";s:7:"artists";s:11:"storage_key";s:10:"01.artists";s:8:"template";s:7:"artists";s:17:"storage_timestamp";i:1602105763;s:8:"markdown";a:1:{s:0:"";a:1:{s:7:"artists";i:1602105763;}}s:8:"children";a:2:{s:11:"artur_laats";b:0;s:4:"eisi";b:0;}s:8:"checksum";s:32:"217f51f18f078712468d9cd41d46b01a";}}

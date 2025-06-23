@@ -1,0 +1,16 @@
+1750674502
+O:39:"Grav\Common\Flex\Types\Pages\PageObject":4:{s:4:"type";s:5:"pages";s:3:"key";s:12:"artists/eisi";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:9:{s:5:"title";s:4:"Eisi";s:11:"media_order";s:8:"eisi.jpg";s:7:"booking";s:22:"akita@underdogs.agency";s:8:"facebook";s:35:"https://www.facebook.com/eisimaeots";s:10:"soundcloud";s:33:"https://soundcloud.com/eisimaeots";s:15:"soundcloud_play";s:8:"15391634";s:9:"instagram";s:36:"https://www.instagram.com/eisimaeots";s:8:"mixcloud";s:38:"https://www.mixcloud.com/eisi-mäeots/";s:11:"residentadv";s:45:"https://www.residentadvisor.net/dj/eisimaeots";}s:11:"frontmatter";s:351:"title: Eisi
+media_order: eisi.jpg
+booking: akita@underdogs.agency
+facebook: 'https://www.facebook.com/eisimaeots'
+soundcloud: 'https://soundcloud.com/eisimaeots'
+soundcloud_play: '15391634'
+instagram: 'https://www.instagram.com/eisimaeots'
+mixcloud: 'https://www.mixcloud.com/eisi-mäeots/'
+residentadv: 'https://www.residentadvisor.net/dj/eisimaeots'";s:8:"markdown";s:1105:"Eisi (Eisi Mäeots) is a DJ/producer from Tallinn. She’s also a member of event series such as Tallinn Express and MÜRK, a radio host and the founder of former underground club ASUM.
+
+Her relationship with music began with classical saxophone studies, after that she went to study genetics. Whereas there was not enough music in her life she decided to switch the music gene back on and study electronic music and composition at Estonian Academy of Music and Theatre. After graduating Eisi is also working on the contemporary music field.
+
+Eisi has played music at many events, venues and festivals in Estonia, Latvia, Finland and Germany - and has shared the stage with names such as UVB, Alex Do, Kollektiv Turmstrasse, Ansome, Miss Sunshine, Juras Lietus, Tripmastaz, Huoratron etc.
+
+In June 2017 Eisi joined the legendary Estonian electronic duo Rulers of the Deep, after that running a Tallinn Express radio show every Saturday on Radio 2. Eisi is also a resident DJ at Club Studio. Eisi's DJ sets are seductive, sharp and well-built ranging from minimal house to groovy acidic electro and techno.";}s:7:"storage";a:6:{s:3:"key";s:12:"artists/eisi";s:11:"storage_key";s:15:"01.artists/eisi";s:8:"template";s:6:"artist";s:17:"storage_timestamp";i:1602146044;s:8:"markdown";a:1:{s:0:"";a:1:{s:6:"artist";i:1602146044;}}s:8:"checksum";s:32:"f5dfe3790a9d70e77e659d089ca4d931";}}

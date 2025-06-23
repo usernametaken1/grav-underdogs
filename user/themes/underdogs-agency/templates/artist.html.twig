@@ -1,0 +1,176 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %} 
+    <div class="container grid-xl artist">
+        <h3>//artists/{{page.folder}}</h3>
+        <h3 class="next-up"><span class="cursor">/</span></h3>
+
+        <div class="columns">
+        
+            <div class="column roster col-auto hide-xl">
+                <div class="nav-holder">
+                    <ul class="nav sticky">
+                        <span class="mb-2">//artist roster</span>
+                        {% for p in page.parent.collection %}
+                            <li class="nav-item {% if p.route == page.url %}active{% endif %}"><a href="{{ p.url }}">{{ p.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        
+        
+        
+        
+
+        <div class="column">
+            <div class="columns">
+                <div class="column col-12"><h1>{{ page.header.title }}</h1></div>
+            
+            
+            
+            
+            <div class="column profile col-auto col-xl-12">
+                                <div class="card">
+                                    <div class="card-image">
+                                        {{ page.media|first.cropZoom(300,300).grayscale.html('Profile image','','img-responsive') }}
+                                    </div>
+                                    <div class="card-header text-center">
+                                        <div class="card-title h5 mt-2">BOOKING INFO:</div>
+                                        <div class="card-subtitle text-gray">
+                                            {% if page.header.booking %}
+                                            <a href="mailto:{{page.header.booking|safe_email}}">{{page.header.booking|safe_email}}</a>{% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="card-body text-center my-2">
+                                        {% if page.header.facebook %}
+                                            <a href="{{page.header.facebook}}" target="_blank">
+                                            <figure class="avatar avatar-md">
+                                                <svg width="100%" height="100%" viewBox="0 0 7 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                                                    <g transform="matrix(1,0,0,1,-19.8164,-7.70646)">
+                                                        <path d="M24.209,22.569L24.209,15.137L26.163,15.137L26.422,12.576L24.209,12.576L24.212,11.294C24.212,10.626 24.273,10.268 25.186,10.268L26.408,10.268L26.408,7.706L24.454,7.706C22.106,7.706 21.28,8.949 21.28,11.038L21.28,12.576L19.816,12.576L19.816,15.137L21.28,15.137L21.28,22.569L24.209,22.569Z" style="fill:rgb(32,32,32);" />
+                                                    </g>
+                                                </svg>
+                                            </figure>
+                                            </a>
+                                        {% endif %} 
+                                        {% if page.header.instagram %}
+                                            <a href="{{page.header.instagram}}" target="_blank">
+                                            <figure class="avatar avatar-md">
+                                            <svg width="100%" height="100%" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                                                <g transform="matrix(1,0,0,1,-12,-4)">
+                                                    <path d="M27.125,4L18.875,4C15.079,4 12,7.079 12,10.875L12,19.125C12,22.921 15.079,26 18.875,26L27.125,26C30.921,26 34,22.921 34,19.125L34,10.875C34,7.079 30.921,4 27.125,4ZM31.938,19.125C31.938,21.779 29.779,23.938 27.125,23.938L18.875,23.938C16.221,23.938 14.063,21.779 14.063,19.125L14.063,10.875C14.063,8.221 16.221,6.063 18.875,6.063L27.125,6.063C29.779,6.063 31.938,8.221 31.938,10.875L31.938,19.125Z" style="fill:rgb(32,32,32);fill-rule:nonzero;" />
+                                                    <path d="M23,9.5C19.963,9.5 17.5,11.963 17.5,15C17.5,18.037 19.963,20.5 23,20.5C26.037,20.5 28.5,18.037 28.5,15C28.5,11.963 26.037,9.5 23,9.5ZM23,18.438C21.105,18.438 19.563,16.895 19.563,15C19.563,13.104 21.105,11.563 23,11.563C24.895,11.563 26.438,13.104 26.438,15C26.438,16.895 24.895,18.438 23,18.438Z" style="fill:rgb(32,32,32);fill-rule:nonzero;" />
+                                                    <path d="M28.913,9.82C29.317,9.82 29.645,9.492 29.645,9.088C29.645,8.683 29.317,8.355 28.913,8.355C28.508,8.355 28.18,8.683 28.18,9.088C28.18,9.492 28.508,9.82 28.913,9.82Z" style="fill:rgb(32,32,32);fill-rule:nonzero;" />
+                                                </g>
+                                            </svg>
+                                        </figure>
+                                            </a>
+                                        {% endif %} 
+                                        {% if page.header.residentadv %}
+                                            <a href="{{page.header.residentadv}}" target="_blank">
+                                            <figure class="avatar avatar-md">
+                                            <svg width="100%" height="100%" viewBox="0 0 30 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                                                <g transform="matrix(1,0,0,1,-8.42212,-7.43119)">
+                                                    <path d="M37.823,19.33C38.023,19.132 38.147,18.856 38.147,18.545C38.147,18.247 38.01,17.978 37.826,17.783L29.432,9.029L26.898,11.671L33.506,18.561L24.146,18.561C23.688,18.548 23.326,18.386 23.017,18.078L18.819,13.696C18.383,13.265 17.786,12.993 17.141,12.993L17.134,12.993L12.004,12.993L12.004,11.163L17.315,11.163C18.368,11.163 19.305,11.614 19.995,12.333L23.129,15.602L25.662,12.96L22.465,9.632C21.13,8.26 19.327,7.431 17.306,7.431L17.299,7.431L8.422,7.431L8.422,16.732L15.936,16.732C16.425,16.735 16.867,16.944 17.185,17.282L21.298,21.571C21.718,21.999 22.283,22.27 22.909,22.294L34.276,22.294C34.756,22.287 35.185,22.081 35.502,21.753L37.823,19.33Z" style="fill:rgb(32,32,32);fill-rule:nonzero;" />
+                                                </g>
+                                            </svg>
+
+                                            </figure>
+                                            </a>
+                                        {% endif %} 
+                                    </div>
+                                </div>
+                                <div class="card sticky">
+                                    <div class="card-body text-center my-2">
+                                        <figure class="avatar avatar-lg">
+                                            <svg width="100%" height="100%" viewBox="0 0 27 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                                                <g transform="matrix(1,0,0,1,-9.41284,-7.43352)">
+                                                    <path d="M9.413,19.625C9.413,19.957 9.532,20.209 9.769,20.379C10.007,20.549 10.261,20.61 10.532,20.56C10.786,20.51 10.964,20.419 11.067,20.286C11.169,20.153 11.22,19.932 11.22,19.625L11.22,16.01C11.22,15.752 11.132,15.534 10.956,15.355C10.78,15.177 10.565,15.087 10.31,15.087C10.065,15.087 9.853,15.177 9.677,15.355C9.501,15.534 9.413,15.752 9.413,16.01L9.413,19.625ZM12.241,21.171C12.241,21.412 12.325,21.592 12.493,21.713C12.661,21.834 12.876,21.894 13.138,21.894C13.409,21.894 13.628,21.833 13.796,21.713C13.964,21.593 14.048,21.412 14.048,21.171L14.048,12.744C14.048,12.495 13.96,12.281 13.784,12.102C13.608,11.923 13.392,11.834 13.138,11.834C12.892,11.834 12.681,11.923 12.505,12.102C12.329,12.281 12.241,12.495 12.241,12.744L12.241,21.171ZM15.056,21.57C15.056,21.811 15.142,21.991 15.315,22.112C15.487,22.232 15.708,22.293 15.978,22.293C16.241,22.293 16.456,22.232 16.624,22.112C16.792,21.991 16.876,21.811 16.876,21.57L16.876,13.878C16.876,13.621 16.788,13.4 16.612,13.218C16.435,13.035 16.224,12.943 15.978,12.943C15.724,12.943 15.507,13.035 15.327,13.218C15.147,13.4 15.056,13.621 15.056,13.878L15.056,21.57ZM17.884,21.607C17.884,22.064 18.187,22.293 18.794,22.293C19.401,22.293 19.704,22.064 19.704,21.607L19.704,9.141C19.704,8.443 19.495,8.049 19.077,7.957C18.806,7.891 18.54,7.97 18.278,8.194C18.015,8.418 17.884,8.734 17.884,9.141L17.884,21.607ZM20.761,21.969L20.761,8.406C20.761,7.974 20.888,7.716 21.142,7.633C21.692,7.5 22.237,7.434 22.778,7.434C24.032,7.434 25.2,7.733 26.282,8.331C27.364,8.929 28.239,9.746 28.907,10.781C29.575,11.815 29.962,12.956 30.069,14.202C30.569,13.986 31.101,13.878 31.667,13.878C32.814,13.878 33.796,14.29 34.612,15.112C35.427,15.935 35.835,16.924 35.835,18.079C35.835,19.243 35.427,20.236 34.612,21.059C33.796,21.881 32.819,22.293 31.679,22.293L20.982,22.28C20.909,22.255 20.853,22.209 20.816,22.143C20.78,22.077 20.761,22.018 20.761,21.969Z" style="fill:rgb(32,32,32);fill-rule:nonzero;" />
+                                                </g>
+                                            </svg>
+
+                                        </figure>
+                                        <figure class="avatar avatar-lg">
+                                            <svg width="100%" height="100%" viewBox="0 0 39 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                                                <g transform="matrix(1,0,0,1,-4,-9)">
+                                                    <path d="M8.001,9L10.23,19.487L10.749,19.487L12.978,9L16.979,9L16.979,20L14.956,20L14.956,10.824L15.332,9.513L14.68,9.513L12.357,20L8.638,20L6.299,9.513L5.662,9.513L6.023,10.824L6.023,20L4,20L4,9L8.001,9ZM43,9.055L43,11.364L38.543,14.5L43,17.636L43,19.946L37.743,16.184L37.178,16.184L31.936,19.946L31.936,17.636L36.378,14.5L31.936,11.364L31.936,9.055L37.178,12.831L37.743,12.831L43,9.055ZM30.213,13.499L30.213,15.501L19.12,15.501L19.12,13.499L30.213,13.499Z" />
+                                                </g>
+                                            </svg>
+                                        </figure>
+                                    </div>
+                                    <div class="card-image">
+                                        <iframe id="sc-player" class="col-12" width="300" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/{{page.header.soundcloud_play}}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+        
+            
+         
+            
+            
+            
+
+            <div class="column col-5 col-sm-12">
+            
+                {{ page.content|raw }}
+            
+            </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    {% if page.header.facebook %} 
+        <script>
+        $(document).ready(function($){
+            
+            
+            var items = ["/", "-", "\\", "|"],
+                $text = $( '.cursor' ),
+                loaded = false;
+
+            function loop() {
+                $.each( items, function ( i, elm ){
+                    $text.delay(300)
+                    $text.queue(function(){
+                        $text.html( items[i] );
+                        $text.dequeue();
+                    });
+                    $text.queue(function(){
+                        if(i == items.length-1 && loaded == false){
+                            loop();   
+                        }
+                        $text.dequeue();
+                    });
+                });
+            }
+
+            loop();
+
+            
+            
+
+            $.ajax('https://fb-artist-event.herokuapp.com/fb-artist-event/?url={{ page.header.facebook|trim('/') }}/events', {
+                success: function(data) {
+                loaded = true;
+                var event = JSON.parse(data);
+                $('.next-up').html('//NEXT UP: <a href="https://facebook.com/event/'+event.eventId+'" target="_blank">('+event.eventDate+') '+event.eventName+' -> ⧉</a>')
+            },
+                error: function() {
+                  console.log('err')
+                }
+            });
+
+        });
+        </script>
+    {% endif %}
+    
+{% endblock %}
+
+{% block background %}
+    {{ page.media|first.brightness(-100).contrast(10).gaussianBlur(3).grayscale.html('','','bg-image') }}
+{% endblock %}
+
+{% block mainmail %}
+    <a class="contact" href="mailto:{{site.author.email|safe_email}}">{{site.author.email|safe_email}}</a>
+{% endblock %}

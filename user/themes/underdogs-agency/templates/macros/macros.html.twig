@@ -1,0 +1,15 @@
+{% macro nav_loop(page) %}
+  {% import _self as macros %}
+  {% for p in page.children.visible %}
+    {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
+    {% set target = p.redirect ? 'target="_blank"' : '' %}
+      <li class="nav-item {{ active_page }}"> 
+      <a href="{{ p.url }}" {{ target }} >
+        {{ p.menu }}
+      </a>
+    </li>
+      {% if p.children.visible.count > 0 %}
+        {{ macros.nav_loop(p) }}
+      {% endif %}
+  {% endfor %}
+{% endmacro %}

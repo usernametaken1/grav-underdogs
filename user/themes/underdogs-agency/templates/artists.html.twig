@@ -1,0 +1,32 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %} 
+    <div class="container grid-xl artist">
+        {{ page.content|raw }}
+        <div class="columns">
+        
+            <div class="column roster col-auto">
+                <div class="nav-holder">
+                    <ul class="nav sticky">
+                        <span class="mb-2">//artist roster</span>
+                        {% for p in page.collection %}
+                            <li class="nav-item {% if p.route == page.url %}active{% endif %}"><a href="{{ p.url }}">{{ p.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        
+        
+        
+        
+
+        <div class="column">
+            <div class="columns">
+
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    
+{% endblock %}

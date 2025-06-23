@@ -1,0 +1,57 @@
+title: Artist
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        gallery:
+          type: tab
+          title: Artist
+
+          fields:
+            header.booking:
+              type: text
+              label: Artist booking email
+              size: medium
+            header.facebook:
+              type: text
+              label: Facebook
+              size: large
+              markdown: true
+              description: 'Only artist/page full url - `https://facebook.com/artistname`' 
+            header.soundcloud:
+              type: text
+              label: Soundcloud
+              size: large
+              markdown: true
+              description: 'Full url - `https://soundcloud.com/artistname`' 
+            header.soundcloud_play:
+              type: text
+              label: Soundcloud player
+              size: small
+              markdown: true
+              description: 'User Id' 
+            header.instagram:
+              type: text
+              label: Instagram
+              size: large
+              markdown: true
+              description: 'Full url - `https://instagarm.com/artistname`' 
+            header.mixcloud:
+              type: text
+              label: Mixcloud
+              size: large
+              markdown: true
+              description: 'Full url - `https://mixcloud.com/artistname`' 
+            header.residentadv:
+              type: text
+              label: Resident advisor
+              size: large
+              markdown: true
+              description: 'Full url - `https://residentadvisor.net/dj/artistname`' 
